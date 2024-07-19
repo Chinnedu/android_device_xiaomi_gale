@@ -9,21 +9,20 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+# Inherit some common twrp stuff.
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from gale device
 $(call inherit-product, device/xiaomi/gale/device.mk)
 
 PRODUCT_DEVICE := gale
-PRODUCT_NAME := omni_gale
+PRODUCT_NAME := twrp_gale
 PRODUCT_BRAND := alps
 PRODUCT_MODEL := gale
 PRODUCT_MANUFACTURER := xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="vnd_gale-user 12 SP1A.210812.016 V816.0.3.0.UGPIDXM release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += \210812.016 V816.0.3.0.UGPIDXM release-keys"
 
 BUILD_FINGERPRINT := alps/vnd_gale/gale:12/SP1A.210812.016/V816.0.3.0.UGPIDXM:user/release-keys
